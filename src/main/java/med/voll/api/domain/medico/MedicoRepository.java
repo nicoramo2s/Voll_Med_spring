@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 public interface MedicoRepository extends JpaRepository<Medico, Long> {
 
     Page<Medico> findByActivoTrue(Pageable paginacion);
-
+// Esto esta mal
     @Query("""
             select m from Medico m
             where m.activo= 1 and
